@@ -1,0 +1,88 @@
+section {
+  padding: 48px 16px;
+}
+
+.small-header header {
+  padding: 16px;
+}
+.small-header header .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.small-header header .container a {
+  color: #0F172A;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 110%;
+}
+.small-header header .container a span {
+  color: #86198F;
+}
+
+.welcome-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.welcome-section .container .section-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.welcome-section .container .section-text .section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.welcome-section .container .section-text .section-header h2 {
+  background: var(--linear-gradient-horizontal-fuchsia, linear-gradient(90deg, #C026D3 0%, #701A75 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 110%;
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+}
+.welcome-section .container .section-text .section-header p {
+  color: #475569;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+}
+.welcome-section .container .section-text .welcome-form {
+  display: flex;
+  gap: 8px;
+}
+.welcome-section .container .section-text .welcome-form .name {
+  border-radius: 19px;
+  border: 1px solid #CBD5E1;
+  padding: 13px 24px;
+}
+.welcome-section .container .section-text .welcome-form .start {
+  background: #C026D3;
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+.welcome-section .container .section-text .welcome-form .start a {
+  padding: 0 16px;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.welcome-section .container .welcome-section {
+  width: 100%;
+}
+.welcome-section .container .welcome-section .img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
