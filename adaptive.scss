@@ -1,7 +1,301 @@
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+
 @media screen and (max-width: 768px) {
+
+  //.computer-version-header {
+  //  display: none;
+  //}
+  .computer-version-paragraph {
+    display: none;
+  }
+
+  .compute-version {
+    display: none;
+  }
 
   .container {
     padding: 0;
   }
 
+  .arrow-right {
+    display: none;
+  }
+
+  .arrow-left {
+    display: none;
+  }
 }
+
+@media screen and (max-width: 992px){
+  .better-everyday .container .better-picture-computer-version {
+    display: none;
+  }
+
+  .computer-version-header {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 568px) {
+
+
+  .favorite-tools {
+
+    .container {
+
+      .content-box-items {
+        @include flexRow;
+        gap: 32px 16px;
+        flex-wrap: wrap;
+
+        .content-box-item {
+          width: calc(50% - 8px);
+        }
+      }
+    }
+  }
+
+
+  .footer {
+
+    .container {
+
+      .section-text {
+        @include flexRow;
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .section-text-col {
+          width: calc(33.333% - 16px);
+
+          ul {
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+
+  .tel-version {
+    display: none;
+  }
+
+  section  {
+    padding: 48px 0;
+  }
+
+  .section-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .other-users {
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .other-users .container .other-users-content {
+    max-width: 756px;
+    width: 100%;
+    padding: 48px;
+
+    .user-card {
+      padding-top: 48px;
+    }
+  }
+
+
+  .tell-version-header {
+    display: none;
+  }
+  .tell-version-paragraph {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 992px) {
+
+  section {
+    padding: 80px 0;
+  }
+
+  .small-header {
+    display: none;
+  }
+
+  .welcome-section .container .section-text .welcome-form .start {
+    padding: 20px 24px;
+  }
+
+  .better-everyday .container .section-text .btn-text {
+    padding: 20px 24px;
+  }
+
+  .better-everyday .container .better-picture-tell-version {
+    display: none;
+  }
+
+  .welcome-section .container {
+    gap: 80px;
+  }
+
+  .stories-from .container {
+    gap: 80px;
+  }
+
+  .better-everyday .container .tell-version-picture {
+    display: none;
+  }
+
+  .welcome-section .container .section-text .section-header h2 {
+    font-size: 72px;
+  }
+  .welcome-section .container .section-text .section-header p {
+    font-size: 20px;
+  }
+
+  .better-everyday .container .section-text {
+    max-width: 900px;
+    width: 100%;
+
+    h2 {
+      font-size: 56px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .stories-from .container .section-text {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 56px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .favorite-tools .container .section-header {
+    max-width: 900px;
+    width: 100%;
+
+    h2 {
+      font-size: 56px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .other-users .container .section-header h2 {
+    font-size: 56px;
+  }
+
+  .other-users .container .other-users-content .content-text h3 {
+    font-size: 32px;
+  }
+
+  .other-users .container .other-users-content .content-text p {
+    font-size: 24px;
+  }
+
+  .asked-questions .container .section-header {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 56px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .footer .container .footer-bottom {
+
+    @include flexRow;
+    justify-content: space-between;
+
+    .footer-text {
+      @include flexRow;
+      gap: 8px;
+    }
+  }
+
+  .asked-questions .container {
+  gap: 80px;
+}
+
+  .favorite-tools .container {
+  gap: 48px}
+
+  header .container .header-content .header-btn button {
+    padding: 20px 24px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1300px ){
+
+  .better-everyday .container .better-picture-computer-version {
+    transform: scale(0.77);
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .favorite-tools .container .content-box-items {
+    gap: 48px;
+  }
+
+  .favorite-tools .container .content-box-items .content-box-item {
+    width: calc(33.333% - 32px);
+    justify-content: start;
+    align-items: start;
+
+    p {
+      text-align: start;
+    }
+  }
+
+  .footer .container .section-text {
+    gap: 0;
+
+    .section-text-col {
+      width: 16.6666%;
+    }
+  }
+
+  .stories-from .container .stories-from-slider .stories-col .stories-slider-content .slider-content-picture img {
+    max-height: 181.5px;
+    height: 100%;
+  }
+
+}
+
