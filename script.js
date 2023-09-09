@@ -1,7 +1,6 @@
 var slider = tns({
     container: '#base',
     items: 4,
-    slideBy: '1',
     speed: 500,
     responsive: {
         0: {
@@ -20,6 +19,12 @@ var slider = tns({
 <path d="M13.314 12.071L8.36399 7.12098C8.18184 6.93238 8.08104 6.67978 8.08332 6.41758C8.0856 6.15538 8.19077 5.90457 8.37618 5.71916C8.56158 5.53375 8.8124 5.42859 9.07459 5.42631C9.33679 5.42403 9.58939 5.52482 9.77799 5.70698L15.435 11.364C15.6225 11.5515 15.7278 11.8058 15.7278 12.071C15.7278 12.3361 15.6225 12.5905 15.435 12.778L9.77799 18.435C9.58939 18.6171 9.33679 18.7179 9.07459 18.7157C8.8124 18.7134 8.56158 18.6082 8.37618 18.4228C8.19077 18.2374 8.0856 17.9866 8.08332 17.7244C8.08104 17.4622 8.18184 17.2096 8.36399 17.021L13.314 12.071Z" fill="#475569"/>
 </svg>`]
         },
+
+        1200: {
+            fixedWidth: false,
+            items: 4,
+            controls: true,
+        }
     }
 });
 
@@ -27,14 +32,14 @@ var slider = tns({
 let headerContainer = document.createElement('div');
 headerContainer.classList.add('container');
 
-let activatedSmallNavBtn  = document.getElementById('active-small-nav');
+let activatedSmallNavBtn = document.getElementById('active-small-nav');
 
 let smallNavContainer = document.getElementById('small-nav-container');
 
-activatedSmallNavBtn.addEventListener('click', ()=> {
+activatedSmallNavBtn.addEventListener('click', () => {
     if (activatedSmallNavBtn.classList.contains("activated-small-nav")) {
 
-
+        document.body.classList.add('overflow-h')
 
 
         headerContainer.innerHTML = `
@@ -63,9 +68,9 @@ activatedSmallNavBtn.addEventListener('click', ()=> {
                 </li>
             </ul>
         </nav>
-        <div class="header-btn">
-            <button type="button"><a href="#">Start Now</a></button>
-        </div>
+        <div class="section-btn">
+            <button type="button">Start Now</button>
+            </div>
     </div>
     
         `
@@ -75,7 +80,7 @@ activatedSmallNavBtn.addEventListener('click', ()=> {
         activatedSmallNavBtn.classList.add('remove-small-nav');
         activatedSmallNavBtn.classList.remove('activated-small-nav');
 
-    } else if (activatedSmallNavBtn.classList.contains('remove-small-nav')){
+    } else if (activatedSmallNavBtn.classList.contains('remove-small-nav')) {
 
         activatedSmallNavBtn.classList.add('activated-small-nav');
         activatedSmallNavBtn.classList.remove('remove-small-nav');
@@ -83,5 +88,8 @@ activatedSmallNavBtn.addEventListener('click', ()=> {
         smallNavContainer.style.right = "-100%";
 
         headerContainer.remove();
+
+        document.body.classList.remove('overflow-h')
+
     }
 })

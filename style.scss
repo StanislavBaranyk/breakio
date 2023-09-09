@@ -40,20 +40,24 @@
 }
 
 @mixin universalBtn {
-  background: #C026D3;
-  border-radius: 19px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
 
-  a {
-    padding: 0 16px;
-    font-size: 16px;
-    color: white;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    text-decoration: none;
+  .section-btn {
+    min-width: 131.81px;
+
+    button {
+
+      background: #C026D3;
+      border-radius: 19px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 28px;
+      font-size: 16px;
+      color: white;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+    }
   }
 }
 
@@ -156,7 +160,7 @@ button, input, optgroup, select, textarea {
 .small-nav-container {
   position: fixed;
   width: 100%;
-  height: 208px;
+  height: 100%;
   z-index: 10;
   right: -100%;
   top: 0;
@@ -165,48 +169,43 @@ button, input, optgroup, select, textarea {
   background: #0b132a;
   padding: 100px 20px 20px;
 
-.container {
-  background: #F1F5F9;
-  padding: 20px;
+  .container {
+    padding: 20px;
 
-  .header-content {
-    @include flexRow;
-    justify-content: space-between;
+    .header-content {
+      @include flexCol;
+      align-items: start;
+      gap: 24px;
 
-    .header-nav {
-      ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        @include flexRow;
-        gap: 16px;
 
-        .nav-item {
-          padding: 8px;
+      .header-nav {
+        ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          @include flexCol;
+          gap: 16px;
 
-          .nav-link {
-            color: #0F172A;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 150%;
-            letter-spacing: 0.5px
+          .nav-item {
+            padding: 8px;
+
+            .nav-link {
+              color: white;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 150%;
+              letter-spacing: 0.5px
+            }
           }
         }
       }
-    }
 
-    .header-btn {
-
-      button {
-        @include universalBtn;
-      }
+      @include universalBtn;
     }
   }
-}
 
 }
-
 
 
 .small-header {
@@ -266,11 +265,9 @@ header {
           }
         }
       }
-      .header-btn {
-        button {
-          @include universalBtn;
-        }
-      }
+
+      @include universalBtn;
+
     }
   }
 }
@@ -280,6 +277,7 @@ header {
 
 .welcome-section {
   padding-top: 100px;
+
   .container {
 
     @include flexCol;
@@ -321,9 +319,7 @@ header {
           width: 100%;
         }
 
-        .start {
-          @include universalBtn;
-        }
+        @include universalBtn;
       }
     }
   }
@@ -355,9 +351,8 @@ header {
         @include sectionParagraph;
       }
 
-      .btn-text {
-        @include universalBtn;
-      }
+      @include universalBtn;
+
     }
 
     .better-picture-tell-version {
@@ -384,6 +379,7 @@ header {
         }
       }
     }
+
     .better-picture-computer-version {
       position: relative;
 
@@ -798,6 +794,7 @@ header {
         }
 
       }
+
       .social-icons {
         @include flexRow;
         gap: 16px;
@@ -1017,6 +1014,10 @@ header {
       }
     }
   }
+}
+
+.overflow-h {
+  overflow: hidden;
 }
 
 

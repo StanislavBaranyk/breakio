@@ -11,6 +11,17 @@
 
 @media screen and (max-width: 768px) {
 
+
+  .other-users {
+
+    .computer-version-container-right {
+      display: none;
+    }
+  }
+  .computer-version-container-left {
+    display: none;
+  }
+
   //.computer-version-header {
   //  display: none;
   //}
@@ -35,7 +46,7 @@
   }
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px) {
   .better-everyday .container .better-picture-computer-version {
     display: none;
   }
@@ -96,7 +107,7 @@
     display: none;
   }
 
-  section  {
+  section {
     padding: 48px 0;
   }
 
@@ -183,6 +194,7 @@
     h2 {
       font-size: 56px;
     }
+
     p {
       font-size: 20px;
     }
@@ -196,6 +208,7 @@
     h2 {
       font-size: 56px;
     }
+
     p {
       font-size: 20px;
     }
@@ -208,6 +221,7 @@
     h2 {
       font-size: 56px;
     }
+
     p {
       font-size: 20px;
     }
@@ -233,6 +247,7 @@
     h2 {
       font-size: 56px;
     }
+
     p {
       font-size: 20px;
     }
@@ -250,18 +265,19 @@
   }
 
   .asked-questions .container {
-  gap: 80px;
-}
+    gap: 80px;
+  }
 
   .favorite-tools .container {
-  gap: 48px}
+    gap: 48px
+  }
 
   header .container .header-content .header-btn button {
     padding: 20px 24px;
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1300px ){
+@media screen and (min-width: 992px) and (max-width: 1300px) {
 
   .better-everyday .container .better-picture-computer-version {
     transform: scale(0.77);
@@ -270,6 +286,11 @@
 }
 
 @media screen and (min-width: 1200px) {
+
+  .welcome-section .container .section-text .welcome-form .section-btn button {
+    width: 200px;
+  }
+
   .favorite-tools .container .content-box-items {
     gap: 48px;
   }
@@ -297,5 +318,37 @@
     height: 100%;
   }
 
+  .stories-from {
+    .container {
+      align-items: center;
+      position: relative;
+
+      .tns-outer {
+        max-width: 1160px;
+        width: 100%;
+      }
+    }
+  }
+
+  .footer .container .section-text .section-text-col ul {
+    align-items: start;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  .stories-from {
+    .container {
+
+      .tns-outer {
+
+        .tns-controls {
+          justify-content: space-between;
+          width: 1280px;
+          top: calc(50% - 12px);
+          left: -5.5%;
+        }
+      }
+    }
+  }
 }
 

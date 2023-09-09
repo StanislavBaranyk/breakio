@@ -32,7 +32,7 @@ button, input, optgroup, select, textarea {
 .small-nav-container {
   position: fixed;
   width: 100%;
-  height: 208px;
+  height: 100%;
   z-index: 10;
   right: -100%;
   top: 0;
@@ -42,43 +42,43 @@ button, input, optgroup, select, textarea {
   padding: 100px 20px 20px;
 }
 .small-nav-container .container {
-  background: #F1F5F9;
   padding: 20px;
 }
 .small-nav-container .container .header-content {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px;
 }
 .small-nav-container .container .header-content .header-nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 16px;
 }
 .small-nav-container .container .header-content .header-nav ul .nav-item {
   padding: 8px;
 }
 .small-nav-container .container .header-content .header-nav ul .nav-item .nav-link {
-  color: #0F172A;
+  color: white;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
   letter-spacing: 0.5px;
 }
-.small-nav-container .container .header-content .header-btn button {
+.small-nav-container .container .header-content .section-btn {
+  min-width: 131.81px;
+}
+.small-nav-container .container .header-content .section-btn button {
   background: #C026D3;
   border-radius: 19px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
-}
-.small-nav-container .container .header-content .header-btn button a {
-  padding: 0 16px;
+  padding: 12px 28px;
   font-size: 16px;
   color: white;
   font-weight: 500;
@@ -144,16 +144,16 @@ header .container .header-content .header-nav ul .nav-item .nav-link {
   line-height: 150%;
   letter-spacing: 0.5px;
 }
-header .container .header-content .header-btn button {
+header .container .header-content .section-btn {
+  min-width: 131.81px;
+}
+header .container .header-content .section-btn button {
   background: #C026D3;
   border-radius: 19px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
-}
-header .container .header-content .header-btn button a {
-  padding: 0 16px;
+  padding: 12px 28px;
   font-size: 16px;
   color: white;
   font-weight: 500;
@@ -213,16 +213,16 @@ header .container .header-content .header-btn button a {
   max-width: 476px;
   width: 100%;
 }
-.welcome-section .container .section-text .welcome-form .start {
+.welcome-section .container .section-text .welcome-form .section-btn {
+  min-width: 131.81px;
+}
+.welcome-section .container .section-text .welcome-form .section-btn button {
   background: #C026D3;
   border-radius: 19px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
-}
-.welcome-section .container .section-text .welcome-form .start a {
-  padding: 0 16px;
+  padding: 12px 28px;
   font-size: 16px;
   color: white;
   font-weight: 500;
@@ -260,16 +260,16 @@ header .container .header-content .header-btn button a {
   font-weight: 400;
   line-height: 140%;
 }
-.better-everyday .container .section-text .btn-text {
+.better-everyday .container .section-text .section-btn {
+  min-width: 131.81px;
+}
+.better-everyday .container .section-text .section-btn button {
   background: #C026D3;
   border-radius: 19px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
-}
-.better-everyday .container .section-text .btn-text a {
-  padding: 0 16px;
+  padding: 12px 28px;
   font-size: 16px;
   color: white;
   font-weight: 500;
@@ -846,6 +846,10 @@ header .container .header-content .header-btn button a {
   position: absolute;
   left: 7%;
   bottom: 30%;
+}
+
+.overflow-h {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
